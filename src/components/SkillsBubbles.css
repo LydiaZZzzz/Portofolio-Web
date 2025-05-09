@@ -1,0 +1,41 @@
+.skills-bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  padding: 2.5rem 0 1.5rem 0;
+}
+.skill-bubble {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5f5f5 60%, #e0e0e0 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  position: relative;
+  animation: bubble-float 2.8s ease-in-out infinite alternate;
+}
+.skill-bubble img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px #0002);
+}
+.skill-bubble:hover {
+  transform: scale(1.13) translateY(-8px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.16);
+  z-index: 2;
+}
+@keyframes bubble-float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-18px); }
+}
+.bubble-anim-1 { animation-delay: 0.5s; }
+.bubble-anim-2 { animation-delay: 1s; }
+.bubble-anim-3 { animation-delay: 1.5s; }
+.bubble-anim-4 { animation-delay: 2s; } 

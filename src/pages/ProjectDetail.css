@@ -1,0 +1,96 @@
+.project-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+.project-detail h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  background: #222;
+  border-radius: 1rem;
+}
+
+.desc {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.content {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  color: #007aff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: #005bb5;
+}
+
+.project-images {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.project-image-16x9 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #eee;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px dashed #bbb;
+  position: relative;
+}
+
+/* 尺寸提示文字 */
+.project-image-16x9::after {
+  content: '16:9 图片区域 (建议900x506px)';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #aaa;
+  font-size: 1.1rem;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+  font-family: 'Montserrat', 'Lora', sans-serif;
+  letter-spacing: 0.5px;
+  text-align: center;
+  white-space: pre-line;
+  display: none;
+}
+
+.project-image-16x9 img.project-image {
+  z-index: 2;
+}
+
+.project-image-16x9:not(:has(img.project-image[src]))::after {
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+} 
